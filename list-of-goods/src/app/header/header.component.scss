@@ -1,0 +1,32 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: slategrey;
+  width: 100%;
+  font-size: 24px;
+  padding: 20px 40px;
+  button {
+    border-radius: 25px;
+    padding: 5px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    outline: none;
+  }
+  button:hover {
+    background-color: coral;
+    transition: 300ms;
+    color: white;
+    box-shadow: 0 0 6px white;
+  }
+  .home {
+    color: black;
+  }
+  .home:hover {
+    color: white;
+    transition: 300ms;
+    text-shadow: 2px 3px 3px black;
+  }
+}
+
+
+
