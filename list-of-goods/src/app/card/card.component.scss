@@ -8,6 +8,12 @@
   box-shadow: 0 0 6px rgba(0, 0, 255, .1);
   margin: 10px 15px;
   border-radius: 5px;
+  .for-image {
+    img {
+      width: 230px;
+      height: 240px;
+    }
+  }
   .description {
     font-weight: bolder;
     font-size: 18px;

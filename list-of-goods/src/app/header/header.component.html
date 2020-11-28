@@ -1,4 +1,8 @@
 <nav>
-  <a class="home" routerLink="">Home</a>
-  <button routerLink="/bucket" (click)="hideBucket()">Bucket</button>
+  <div *ngIf="homeButton" class="home-button">
+    <a class="home" routerLink="" (click)="showHomeButton()">HOME</a>
+  </div>
+  <div *ngIf="bucketButton" class="for-button">
+    <button routerLink="/bucket" (click)="hideBucket()">Bucket</button>
+  </div>
 </nav>

@@ -1,6 +1,9 @@
 
 <div class="container">
   <div class="list">
-    <app-card></app-card>
+    <app-card
+      *ngFor="let card of cards"
+      [cardElement]="card"
+    ></app-card>
   </div>
 </div>

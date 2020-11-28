@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CardInterface} from "../cardInterface";
 
 @Component({
   selector: 'app-header',
@@ -6,10 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  show = true;
+ public bucketButton:boolean = true;
+ public homeButton:boolean = false;
+
+
   constructor() { }
 
   ngOnInit(): void {
   }
-  // public hideBucket() = !this.show;
+  hideBucket() {
+    this.bucketButton = false;
+    this.homeButton = true;
+  }
+  showHomeButton() {
+    this.bucketButton = true;
+    this.homeButton = false;
+  }
+
+
 }

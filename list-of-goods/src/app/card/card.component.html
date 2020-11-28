@@ -1,11 +1,11 @@
 <div class="card">
   <div class="for-image">
-    <img src="./assets/images/trimmer.jpg" alt="trimmer">
+    <img [src] = "cardElement.image" alt="image">
   </div>
   <div class="description">
-    Philips ONE Blade
+    {{cardElement.description}}
   </div>
-  <div class="price">price: 990$</div>
+  <div class="price">{{cardElement.price}}</div>
   <div class="for-button">
     <button>ADD TO BUCKET</button>
   </div>
