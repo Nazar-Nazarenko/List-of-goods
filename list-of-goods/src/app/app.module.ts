@@ -8,8 +8,9 @@ import { CardBucketComponent } from './card-bucket/card-bucket.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { BucketComponent } from './bucket/bucket.component';
-import { RegistrationFormComponent } from './registration-form/registration-form.component';
-import {FormsModule} from "@angular/forms";
+import  { ReactiveFormsModule} from "@angular/forms";
+import { FormComponent } from './form/form.component';
+
 
 @NgModule({
   declarations: [
@@ -19,12 +20,12 @@ import {FormsModule} from "@angular/forms";
     HomeComponent,
     HeaderComponent,
     BucketComponent,
-    RegistrationFormComponent,
+    FormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

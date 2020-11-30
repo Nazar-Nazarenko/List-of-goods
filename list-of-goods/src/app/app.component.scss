@@ -1,5 +1,20 @@
+.main {
+  position: relative;
+  app-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    width: 100%;
+  }
+  .router-container {
+    margin-top: 80px;
+  }
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
 }
+
 

@@ -1,5 +1,6 @@
 export interface CardInterface {
-  image:string,
+  image: string,
   description: string,
-  price:string,
+  price: number,
+  count: number,
 }

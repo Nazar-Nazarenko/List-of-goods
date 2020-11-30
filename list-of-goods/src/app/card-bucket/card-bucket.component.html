@@ -1,25 +1,25 @@
 <div class="card-bucket">
   <div class="image">
-    <img src="./assets/images/trimmer.jpg" alt="trimmer">
+    <img [src] = "cardBucketElement.image" alt="image">
   </div>
   <div class="info">
     <div class="name">
-      Philips ONE Blade
+      {{cardBucketElement.description}}
     </div>
     <div class="description">
       trimmer
     </div>
     <div class="price">
-      990$
+      {{cardBucketElement.price}}
     </div>
   </div>
   <div class="buttons">
     <div class="for-button">
-      <button>+</button>
+      <button (click)="growNumber()">{{plus}}</button>
     </div>
-    <div class="value">1</div>
+    <div class="value">{{this.cardBucketElement.count}}</div>
     <div class="for-button">
-      <button>-</button>
+      <button (click)="lessNumber()">{{minus}}</button>
     </div>
   </div>
 </div>

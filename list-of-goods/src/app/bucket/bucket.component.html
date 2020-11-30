@@ -1,8 +1,22 @@
-<div class="bucket">
-  <app-card-bucket></app-card-bucket>
+<div class="container">
+  <div class="bucket">
+    <div class="cards">
+      <app-card-bucket
+        *ngFor="let card of cards"
+        [cardBucketElement]="card"
+      ></app-card-bucket>
+    </div>
+    <div class="form">
+      <app-form></app-form>
+    </div>
+
+  </div>
+  <div class="total">
+    <div class="name">TOTAL:</div>
+    <div class="value">
+      {{bucketServiceService.getPrice()}}
+    </div>
+  </div>
+  <hr>
 </div>
-<div class="total">
-  <div class="name">TOTAL:</div>
-  <div class="value"></div>
-</div>
-<hr>
+
