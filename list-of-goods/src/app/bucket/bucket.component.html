@@ -1,4 +1,12 @@
-<div class="container">
+<div class="container" id="submitData">
+  <div *ngIf="jsonLocked" class="for-json">{{cardJson}}</div>
+  <div class="total">
+    <div class="name">TOTAL:</div>
+    <div class="value">
+      {{bucketServiceService.getPrice()}}
+    </div>
+  </div>
+  <hr>
   <div class="bucket">
     <div class="cards">
       <app-card-bucket
@@ -9,14 +17,6 @@
     <div class="form">
       <app-form></app-form>
     </div>
-
   </div>
-  <div class="total">
-    <div class="name">TOTAL:</div>
-    <div class="value">
-      {{bucketServiceService.getPrice()}}
-    </div>
-  </div>
-  <hr>
 </div>
 

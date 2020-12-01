@@ -8,15 +8,16 @@ import {BucketServiceService} from "../bucket-service.service";
   styleUrls: ['./bucket.component.scss']
 })
 export class BucketComponent implements OnInit {
+  jsonLocked = false;
   @Input() cardBucketElement: CardInterface | any;
 
   public cards: CardInterface[];
-
   constructor(public bucketServiceService: BucketServiceService) {
     this.cards = this.bucketServiceService.items;
   }
-
   ngOnInit(): void {
   }
+  public cardJson = JSON.stringify(this.bucketServiceService);
+
 
 }

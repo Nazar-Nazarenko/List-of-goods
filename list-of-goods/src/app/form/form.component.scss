@@ -2,6 +2,9 @@ form {
   background-color: coral;
   padding: 60px 25px;
   border-radius: 8px;
+  @media screen and (max-width: 768px) {
+    margin-top: 10px;
+  }
 
   label {
     display: flex;

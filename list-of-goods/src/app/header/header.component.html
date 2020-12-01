@@ -3,7 +3,7 @@
     <a class="home" routerLink="" (click)="showHomeButton()">HOME</a>
   </div>
   <div *ngIf="bucketButton" class="for-button">
-    <div class="number" id="count">{{bucketServiceService.items.length}}</div>
+    <div *ngIf="this.bucketServiceService.items.length > 0" class="number" id="count">{{bucketServiceService.items.length}}</div>
        <button routerLink="/bucket" (click)="hideBucket()">Bucket</button>
   </div>
 </nav>

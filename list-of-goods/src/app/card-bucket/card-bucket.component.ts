@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {CardInterface} from "../cardInterface";
+import {BucketServiceService} from "../bucket-service.service";
 
 
 @Component({
@@ -13,7 +14,7 @@ export class CardBucketComponent implements OnInit {
   plus: string = '+';
   minus: string = '-';
 
-  constructor() { }
+  constructor(public bucketServiceService: BucketServiceService) { }
 
   ngOnInit(): void {
   }
@@ -22,7 +23,12 @@ export class CardBucketComponent implements OnInit {
   }
 
   lessNumber() {
-    this.cardBucketElement.count--;
+    if (this.cardBucketElement.count > 1) {
+      this.cardBucketElement.count--;
+    }else if(this.cardBucketElement.count === 1) {
+      this.bucketServiceService.deleteItem();
+    }
+
   }
 
 }

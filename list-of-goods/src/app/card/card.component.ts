@@ -16,10 +16,12 @@ export class CardComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // this.cardElement = localStorage.getItem("token");
   }
 
   public addToBucket(card: any) {
     this.bucketServiceService.addItem(card);
+    // localStorage.setItem("token", this.cardElement);
   }
 
 

@@ -4,7 +4,9 @@ nav {
   background-color: slategrey;
   width: 100%;
   font-size: 24px;
-  padding: 20px 40px;
+  padding: 20px 30px;
+  height: 80px;
+
   .for-button {
     display: flex;
     button {
@@ -15,12 +17,13 @@ nav {
       outline: none;
     }
     .number {
-      width: 30px;
-      height: 30px;
+      width: 25px;
+      height: 24px;
       border-radius: 25px;
       background-color: white;
-      margin: 5px 10px;
+      margin: 8px 3px;
       text-align: center;
+      font-size: 18px;
     }
     button:hover {
       background-color: coral;

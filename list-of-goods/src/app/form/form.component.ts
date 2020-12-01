@@ -21,6 +21,7 @@ export class FormComponent implements OnInit {
       return;
     }
     this.submitted = true;
+    console.log(this.userProfileForm.controls);
   }
 
 
