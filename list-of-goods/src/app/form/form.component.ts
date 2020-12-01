@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators} from "@angular/forms";
+import {BucketServiceService} from "../bucket-service.service";
 
 @Component({
   selector: 'app-form',
@@ -21,11 +22,14 @@ export class FormComponent implements OnInit {
       return;
     }
     this.submitted = true;
-    console.log(this.userProfileForm.controls);
+    const data = {
+      user: this.userProfileForm.value,
+      order: this.bucketServiceService.items
+    }
+    console.log(data);
   }
 
-
-  constructor() { }
+  constructor(private bucketServiceService: BucketServiceService) { }
 
   ngOnInit(): void {
   }

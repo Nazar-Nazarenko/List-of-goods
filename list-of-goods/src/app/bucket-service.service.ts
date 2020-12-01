@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import { CardInterface} from "./cardInterface";
+import {CardInterface} from "./cardInterface";
 
 
 @Injectable({
@@ -9,6 +9,9 @@ export class BucketServiceService {
 
   public items: CardInterface[] = [];
 
+  constructor() {
+    this.getDataFromLocalstorage();
+  }
 
   getPrice() {
     let total = 0;
@@ -21,20 +24,29 @@ export class BucketServiceService {
     return total;
   }
 
+  private setDataToLocalstorage() {
+    localStorage.setItem("token", JSON.stringify(this.items));
+  }
+
+  // private removeDataFromLocalstorage() {
+  //   localStorage.removeItem("token");
+  // }
+  private getDataFromLocalstorage() {
+    const stringifyData = localStorage.getItem("token");
+    this.items = stringifyData ? JSON.parse(stringifyData) : [];
+  }
+
   public addItem(item: any) {
     item.count = 1;
     this.items.push(item);
     this.getPrice();
-    localStorage.setItem("token",JSON.stringify(this.items));
+    this.setDataToLocalstorage();
   }
-  public  deleteItem() {
+
+  public deleteItem() {
     this.items.pop();
     this.getPrice();
-    localStorage.removeItem("token");
-  }
-
-
-  constructor() {
+    this.setDataToLocalstorage();
   }
 
 
