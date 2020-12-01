@@ -28,9 +28,6 @@ export class BucketServiceService {
     localStorage.setItem("token", JSON.stringify(this.items));
   }
 
-  // private removeDataFromLocalstorage() {
-  //   localStorage.removeItem("token");
-  // }
   private getDataFromLocalstorage() {
     const stringifyData = localStorage.getItem("token");
     this.items = stringifyData ? JSON.parse(stringifyData) : [];
